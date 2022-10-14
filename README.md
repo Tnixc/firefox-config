@@ -9,14 +9,14 @@
 [Tab Center Reborn Extension](https://addons.mozilla.org/en-US/firefox/addon/tabcenter-reborn/)
 
 ### Files
-`1. chrome.zip`
+`1. chrome` folder
 
 `2. custom.css`
 
 ---
 # Installation
 
-!!! **Warning: Some colors are hard coded** !!!
+!!! **Warning: Some colors are hard coded, also changes back and forward buttons and the like** !!!
 
 1. Enable the custom userChrome.css
    1. Drag the `chrome` unzipped directory in your profiles
