@@ -16,7 +16,7 @@
 ---
 # Installation
 
-!!! **Warning: Some colors are hard coded, also changes back and forward buttons and the like** !!!
+!!! **Warning: Some colors are hard coded, also changes back and forward buttons and the like. Also like half the css is unused so fix it if you want** !!!
 
 1. Enable the custom userChrome.css
    1. Drag the `chrome` unzipped directory in your profiles
