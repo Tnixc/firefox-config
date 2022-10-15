@@ -1,6 +1,6 @@
 # Firefox vertical tabs setup
 
-<img align="left" width="50%" height="50%" src="https://cdn.discordapp.com/attachments/1030274959886532618/1030466755216277594/unknown.png">
+<img src="https://cdn.discordapp.com/attachments/1030274959886532618/1030466755216277594/unknown.png">
 
 ## You will need
 
