@@ -1,0 +1,173 @@
+.toolbarbutton-badge {
+    background-color: var(--uc-toolbarbutton-badge-bgcolor) !important;
+    color: var(--uc-toolbarbutton-badge-color) !important;
+    /* bc hydrus' "Post" label is too long */
+    /* max-width: 27px !important; */
+}
+
+/***** ICONS *****/
+
+/* tree-style-tabs */
+.webextension-browser-action[data-extensionid="treestyletab@piro.sakura.ne.jp"i]
+    .toolbarbutton-icon,
+#sidebarMenu-popup
+    #button_treestyletab_piro_sakura_ne_jp-sidebar-action:not([checked="true"]) {
+    list-style-image: url("../resources/extensions/tree-style-tabs-32.svg") !important;
+}
+
+.eom-addon-button[data-extensionid="treestyletab@piro.sakura.ne.jp"i]
+    .toolbarbutton-icon,
+menupopup#viewSidebarMenu
+    menuitem.menuitem-iconic.webextension-menuitem#menu_treestyletab_piro_sakura_ne_jp-sidebar-action[style]:is([type="checkbox"], [type="radio"]):not([checked="true"]) {
+    list-style-image: url("../resources/extensions/tree-style-tabs.svg") !important;
+}
+
+/* SVG gobbler */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{7962ff4a-5985-4cf2-9777-4bb642ad05b8}"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/svg-gobbler.svg") !important;
+}
+
+/* return youtube dislikes */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{762f9885-5a13-4abd-9c77-433dcd38b8fd}"]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/dislike.svg") !important;
+    transform: scaleX(-1);
+}
+
+/* cookie remover */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{3507f56d-2ef5-45c1-b6d7-5297a0ba7642}"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/3rdpartycookies-disabled.svg");
+}
+
+/* i don't care about cookies */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="jid1-KKzOGWgsW3Ao4Q@jetpack"i]
+    .toolbarbutton-icon,
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="idcac-pub@guus.ninja"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/3rdpartycookies.svg");
+}
+
+/* dark reader */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="addon@darkreader.org"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/darkmode.svg");
+}
+
+/* dark reader's popup, corresponds to colors set in userContent.css */
+#customizationui-widget-panel[viewId="PanelUI-webext-addon_darkreader_org-browser-action-view"] {
+    --arrowpanel-background: var(--tooltip-bgcolor) !important;
+    --arrowpanel-border-color: var(--uc-menu-border-color) !important;
+}
+
+/* uBlock origin */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="uBlock0@raymondhill.net"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/show-password.svg");
+}
+
+/* uBlock origin disabled on this site */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="uBlock0@raymondhill.net"i][style*="icon_16-off.png"]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/hide-password.svg");
+}
+
+/* violentmonkey/tampermonkey, for injecting scripts into content windows */
+:is(.webextension-browser-action, .eom-addon-button)[label^="Violentmonkey"]
+    .toolbarbutton-icon,
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{aecec67f-0d10-4fa7-b7c7-609a2db280cf}"i]
+    .toolbarbutton-icon,
+:is(.webextension-browser-action, .eom-addon-button)[label^="Tampermonkey"]
+    .toolbarbutton-icon,
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{db4c0b1f-a516-4c61-85ba-af46ccfc6d13}"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/tool-webconsole.svg");
+}
+
+.tabbrowser-tab[label$="Violentmonkey"] .tab-icon-image,
+.tabbrowser-tab[label$="Tampermonkey"] .tab-icon-image {
+    content: url("../resources/extensions/tool-webconsole.svg") !important;
+    fill: currentColor !important;
+}
+
+/* stylus, for injecting inline CSS into content windows. more useful than
+userContent.css when dealing with very complex websites that need
+elaborate/compiled stylesheets */
+:is(.webextension-browser-action, .eom-addon-button)[label="Stylus"]
+    .toolbarbutton-icon,
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/stylus.svg");
+}
+
+/* sponsorblock */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="sponsorBlocker@ajay.app"]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/sponsorblock.svg");
+}
+
+/* bypass paywalls */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="bypasspaywalls@bypasspaywalls"]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/bypass-paywalls.svg");
+}
+
+/* react devtools */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="@react-devtools"]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/react.svg");
+}
+
+/* invert github's black icon */
+:is(.menu-iconic-icon, .toolbarbutton-icon, .urlbarView-favicon):is([src^="page-icon:https://github.com"], [src^="page-icon:http://github.com"])
+{
+    background-image: url("../resources/extensions/github.svg") !important;
+    background-size: 16px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-inline: 16px 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* multi-container tabs */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="@testpilot-containers"i]
+    .toolbarbutton-icon {
+    list-style-image: url("../resources/extensions/container-base.svg");
+}
+
+:is(.pageAction-panel-button, .urlbar-page-action)[actionid="_testpilot-containers"] {
+    --pageAction-image-16px: url("../resources/extensions/container-go.svg") !important;
+    --pageAction-image-32px: url("../resources/extensions/container-go.svg") !important;
+    list-style-image: url("../resources/extensions/container-go.svg") !important;
+}
+
+/* canvasblocker */
+:is(.pageAction-panel-button, .urlbar-page-action)[actionid^="canvasblocker_"],
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="CanvasBlocker@kkapsner.de"] {
+    --pageAction-image-16px: url("../resources/extensions/fingerprint.svg") !important;
+    --pageAction-image-32px: url("../resources/extensions/fingerprint.svg") !important;
+    list-style-image: url("../resources/extensions/fingerprint.svg") !important;
+    opacity: 0.9;
+}
+
+/* hydrus */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="hydruscompanion@hydruscompanion.hydruscompanion"] {
+    --pageAction-image-16px: url("../resources/extensions/hydrus.svg") !important;
+    --pageAction-image-32px: url("../resources/extensions/hydrus.svg") !important;
+    list-style-image: url("../resources/extensions/hydrus.svg") !important;
+    transform: scale(1.08);
+}
+
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="hydruscompanion@hydruscompanion.hydruscompanion"][badge="Post"]
+    .toolbarbutton-badge {
+    font-size: 8px !important;
+}
+
+/* yomichan */
+:is(.webextension-browser-action, .eom-addon-button)[data-extensionid="alex@foosoft.net"] {
+    --pageAction-image-16px: url("../resources/extensions/yomichan.svg") !important;
+    --pageAction-image-32px: url("../resources/extensions/yomichan.svg") !important;
+    list-style-image: url("../resources/extensions/yomichan.svg") !important;
+    /* transform: scale(0.99); */
+}

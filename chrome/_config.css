@@ -1,0 +1,64 @@
+@import url("./palette/catppuccin-frappe.css");
+
+:root {
+    --uc-tab-min-height: 32px;
+    --uc-tab-inactive-max-width: calc(225px / 2);
+    --uc-tab-border-radius: 8px;
+    --uc-tab-margin: 4px;
+    --uc-tab-outline-width: 2px;
+    --uc-tab-inactive-opacity: 0.55;
+
+    --uc-urlbar-box-text-color: var(--toolbarbutton-icon-fill);
+    --uc-urlbar-box-hover-bgcolor: var(--lwt-toolbarbutton-icon-fill-attention);
+    --uc-urlbar-box-active-bgcolor: color-mix(
+        in hsl,
+        var(--toolbarbutton-icon-fill) 90%,
+        var(--tabpanel-background-color)
+    );
+    --uc-urlbar-box-hover-text-color: var(--tabpanel-background-color);
+
+    --uc-focus-outline-color: var(--toolbar-field-focus-border-color);
+
+    --uc-toolbarbutton-badge-bgcolor: var(
+        --lwt-toolbarbutton-icon-fill-attention
+    );
+    --uc-toolbarbutton-badge-color: var(--tabpanel-background-color);
+    --uc-toolbarbutton-border-radius: 8px;
+
+    /* --uc-menu-background: var(--arrowpanel-background);
+    --uc-menu-color: var(--arrowpanel-color);
+    --uc-menu-border-color: var(--arrowpanel-border-color);
+    --uc-menuitem-hover-background-color: color-mix(
+        in srgb,
+        currentColor 11%,
+        transparent
+    );
+    --uc-menu-disabled-color: var(--panel-disabled-color);
+    --uc-menuitem-disabled-hover-background-color: var(
+        --uc-menuitem-hover-background-color
+    ); */
+
+    --uc-bookmark-height: 20px; /* Might need to adjust if the toolbar has other buttons */
+    --uc-bookmark-padding: 4px; /* Vertical padding to be applied to bookmarks */
+    --uc-bookmark-autohide-delay: 300ms;
+
+    /* 0deg = "show" ; 90deg = "hide" ;  Set the following to control when bookmarks are shown */
+    --uc-bookmark-autohide-focus-rotation: 90deg; /* urlbar is focused */
+    --uc-bookmark-autohide-hover-rotation: 0deg; /* cursor is over the toolbar area */
+
+    --uc-findbar-min-width: 225px;
+    --uc-findbar-max-width: 400px;
+    --uc-findbar-height: 22px;
+    --uc-findbar-textbox-bg-transition-duration: 200ms;
+
+    /* identity colors */
+    --uc-identity-toolbar: var(--ctp-text);
+    --uc-identity-blue: var(--ctp-sapphire);
+    --uc-identity-turquoise: var(--ctp-teal);
+    --uc-identity-green: var(--ctp-green);
+    --uc-identity-yellow: var(--ctp-yellow);
+    --uc-identity-orange: var(--ctp-peach);
+    --uc-identity-red: var(--ctp-red);
+    --uc-identity-pink: var(--ctp-pink);
+    --uc-identity-purple: var(--ctp-mauve);
+}

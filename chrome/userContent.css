@@ -1,0 +1,168 @@
+@import url("_config.css");
+
+:host,
+:root {
+    --in-content-page-color: #4c4f69 !important;
+    --in-content-page-background: #e6e9ef !important;
+    --in-content-deemphasized-text: #6c6f85 !important;
+    --in-content-box-background: #eff1f5 !important;
+    --in-content-box-border-color: #bcc0cc !important;
+    --in-content-box-info-background: #eff1f5 !important;
+    --in-content-icon-color: #eff1f5 !important;
+    --in-content-border-color: #bcc0cc !important;
+    --in-content-error-text-color: #d20f39 !important;
+    --in-content-button-background: #ccd0da !important;
+    --in-content-button-background-hover: #bdc2cf !important;
+    --in-content-button-background-active: #b1b7c6 !important;
+    --in-content-primary-button-text-color: #eff1f5 !important;
+    --in-content-primary-button-background: #1e66f5 !important;
+    --in-content-primary-button-background-hover: #0a52e0 !important;
+    --in-content-primary-button-background-active: #094dd3 !important;
+    --in-content-danger-button-background: #e64553;
+    --in-content-danger-button-background-hover: #e01e2f !important;
+    --in-content-danger-button-background-active: #d31c2c !important;
+    --in-content-table-background: #eff1f5 !important;
+    --blue-40: #3575f6 !important;
+    --blue-50: #1e66f5 !important;
+    --blue-60: #0b56ed !important;
+    --blue-70: #094dd3 !important;
+    --blue-80: #0843b8 !important;
+    --grey-30: #ccd0da !important;
+    --grey-60: #7c7f93 !important;
+    --grey-90-a10: rgba(92, 95, 119, 0.1) !important;
+    --grey-90-a20: rgba(92, 95, 119, 0.2) !important;
+    --grey-90-a30: rgba(92, 95, 119, 0.3) !important;
+    --grey-90-a50: rgba(92, 95, 119, 0.5) !important;
+    --grey-90-a60: rgba(92, 95, 119, 0.6) !important;
+    --green-50: #40a02b !important;
+    --green-60: #3a9027 !important;
+    --green-70: #338022 !important;
+    --green-80: #2d701e !important;
+    --green-90: #26601a !important;
+    --orange-50: #fe640b !important;
+    --red-40: #ed1140 !important;
+    --red-50: #d20f39 !important;
+    --red-60: #bd0e33 !important;
+    --red-70: #a80c2e !important;
+    --red-80: #930b28 !important;
+    --red-90: #7e0922 !important;
+    --yellow-50: #df8e1d !important;
+    --yellow-60: #c9801a !important;
+    --yellow-60-a30: rgba(201, 128, 26, 0.3) !important;
+    --yellow-70: #b27217 !important;
+    --yellow-80: #9c6314 !important;
+    --yellow-90: #865511 !important;
+}
+
+.identity-color-toolbar {
+    --identity-tab-color: #4c4f69 !important;
+    --identity-icon-color: #4c4f69 !important;
+}
+
+.identity-color-blue {
+    --identity-tab-color: #209fb5 !important;
+    --identity-icon-color: #209fb5 !important;
+}
+
+.identity-color-turquoise {
+    --identity-tab-color: #179299 !important;
+    --identity-icon-color: #179299 !important;
+}
+
+.identity-color-green {
+    --identity-tab-color: #40a02b !important;
+    --identity-icon-color: #40a02b !important;
+}
+
+.identity-color-yellow {
+    --identity-tab-color: #df8e1d !important;
+    --identity-icon-color: #df8e1d !important;
+}
+
+.identity-color-orange {
+    --identity-tab-color: #fe640b !important;
+    --identity-icon-color: #fe640b !important;
+}
+
+.identity-color-red {
+    --identity-tab-color: #d20f39 !important;
+    --identity-icon-color: #d20f39 !important;
+}
+
+.identity-color-pink {
+    --identity-tab-color: #ea76cb !important;
+    --identity-icon-color: #ea76cb !important;
+}
+
+.identity-color-purple {
+    --identity-tab-color: #8839ef !important;
+    --identity-icon-color: #8839ef !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    :host,
+    :root {
+        --in-content-page-background: #181825 !important;
+        --in-content-page-color: #cdd6f4 !important;
+        --in-content-deemphasized-text: #a6adc8 !important;
+        --in-content-box-background: #1e1e2e !important;
+        --in-content-table-border-color: #45475a !important;
+        --in-content-box-info-background: #1e1e2e !important;
+        --in-content-box-border-color: #45475a !important;
+        --in-content-border-color: #313244 !important;
+        --in-content-border-hover: #45475a !important;
+        --in-content-border-invalid: #ed9eab !important;
+        --in-content-error-text-color: #eba0ac !important;
+        --in-content-button-background: #313244 !important;
+        --in-content-button-background-hover: #2a2b3a !important;
+        --in-content-button-background-active: #393a4f !important;
+        --in-content-icon-color: #11111b !important;
+        --in-content-primary-button-text-color: #11111b !important;
+        --in-content-primary-button-background: #89b4fa !important;
+        --in-content-primary-button-background-hover: #89b4fb !important;
+        --in-content-primary-button-background-active: #8fb8fa !important;
+        --in-content-danger-button-background: #eba0ac !important;
+        --in-content-danger-button-background-hover: #e16f81 !important;
+        --in-content-danger-button-background-active: #eca5b0 !important;
+        --in-content-table-background: #1e1e2e !important;
+        --card-outline-color: #585b70 !important;
+        --dialog-warning-text-color: #eba0ac !important;
+    }
+    .identity-color-toolbar {
+        --identity-tab-color: #cdd6f4 !important;
+        --identity-icon-color: #cdd6f4 !important;
+    }
+    .identity-color-blue {
+        --identity-tab-color: #74c7ec !important;
+        --identity-icon-color: #74c7ec !important;
+    }
+    .identity-color-turquoise {
+        --identity-tab-color: #94e2d5 !important;
+        --identity-icon-color: #94e2d5 !important;
+    }
+    .identity-color-green {
+        --identity-tab-color: #a6e3a1 !important;
+        --identity-icon-color: #a6e3a1 !important;
+    }
+    .identity-color-yellow {
+        --identity-tab-color: #f9e2af !important;
+        --identity-icon-color: #f9e2af !important;
+    }
+    .identity-color-orange {
+        --identity-tab-color: #fab387 !important;
+        --identity-icon-color: #fab387 !important;
+    }
+    .identity-color-red {
+        --identity-tab-color: #f38ba8 !important;
+        --identity-icon-color: #f38ba8 !important;
+    }
+    .identity-color-pink {
+        --identity-tab-color: #f5c2e7 !important;
+        --identity-icon-color: #f5c2e7 !important;
+    }
+    .identity-color-purple {
+        --identity-tab-color: #cba6f7 !important;
+        --identity-icon-color: #cba6f7 !important;
+    }
+}
+

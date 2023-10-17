@@ -1,0 +1,60 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_bookmarks_toolbar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+:root[uidensity="compact"] #PersonalToolbar {
+    --uc-bookmark-padding: 1px;
+}
+
+:root[uidensity="touch"] #PersonalToolbar {
+    --uc-bookmark-padding: 7px;
+}
+
+#PersonalToolbar:not([customizing]) {
+    position: relative;
+    margin-bottom: calc(
+        0px - var(--uc-bookmark-height, 20px) - 2 *
+            var(--uc-bookmark-padding, 20px)
+    );
+    transform: rotateX(90deg);
+    transform-origin: top;
+    transition: transform 135ms linear var(--uc-bookmark-autohide-delay, 600ms) !important;
+    z-index: 1;
+
+    /* The following properties should allow themes with trasparent toolbars to work */
+    background-color: #11111B !important;
+    background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);
+
+    --uc-bg-y: calc(
+        -2 * (
+                var(--tab-block-margin) + var(--toolbarbutton-inner-padding) +
+                    var(--toolbarbutton-outer-padding)
+            ) - var(--tab-min-height) - 16px - var(--bookmark-block-padding)
+    );
+    background-position: top left, top left,
+        var(--lwt-background-alignment, top left);
+    background-position-y: top, top, var(--uc-bg-y), var(--uc-bg-y),
+        var(--uc-bg-y);
+    background-image: var(--toolbar-bgimage),
+        linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)),
+        var(--lwt-header-image, var(--lwt-additional-images)) !important;
+}
+
+#PlacesToolbarItems > .bookmark-item,
+#OtherBookmarks,
+#PersonalToolbar > #import-button {
+    padding-block: var(--uc-bookmark-padding) !important;
+}
+
+#nav-bar:focus-within + #PersonalToolbar {
+    transition-delay: 100ms !important;
+    transform: rotateX(var(--uc-bookmark-autohide-focus-rotation, 0));
+}
+
+#navigator-toolbox:hover > #PersonalToolbar {
+    transition-delay: 100ms !important;
+    transform: rotateX(var(--uc-bookmark-autohide-hover-rotation, 0));
+}
+
+#navigator-toolbox:hover > #nav-bar:focus-within + #PersonalToolbar {
+    transform: rotateX(0);
+}

@@ -1,0 +1,93 @@
+:root {
+    --tab-min-height: var(--uc-tab-min-height, 32px) !important;
+    --tab-border-radius: var(--uc-tab-border-radius, 8px) !important;
+
+    --toolbarbutton-border-radius: var(
+        --uc-toolbarbutton-border-radius,
+        8px
+    ) !important;
+
+    --urlbar-box-hover-bgcolor: var(
+        --uc-urlbar-box-hover-bgcolor,
+        var(--button-hover-bgcolor)
+    ) !important;
+    --urlbar-box-active-bgcolor: var(
+        --uc-urlbar-box-active-bgcolor,
+        var(--button-active-bgcolor)
+    ) !important;
+    --urlbar-box-hover-text-color: var(
+        --uc-urlbar-box-hover-text-color,
+        var(--urlbar-box-text-color)
+    ) !important;
+    /* --urlbar-box-focus-bgcolor: var(--uc-urlbar-box-focus-bgcolor, var(--button-bgcolor)) !important; */
+
+    --focus-outline-color: var(--uc-focus-outline-color) !important;
+}
+
+/***** usercontext.css *****/
+.identity-color-toolbar {
+    --identity-tab-color: var(
+        --uc-identity-toolbar,
+        var(--toolbar-field-color)
+    ) !important;
+    --identity-icon-color: var(
+        --uc-identity-toolbar,
+        var(--toolbar-field-color)
+    ) !important;
+}
+
+.identity-color-blue {
+    --identity-tab-color: var(--uc-identity-blue, #37adff) !important;
+    --identity-icon-color: var(--uc-identity-blue, #37adff) !important;
+}
+
+.identity-color-turquoise {
+    --identity-tab-color: var(--uc-identity-turquoise, #00c79a) !important;
+    --identity-icon-color: var(--uc-identity-turquoise, #00c79a) !important;
+}
+
+.identity-color-green {
+    --identity-tab-color: var(--uc-identity-green, #51cd00) !important;
+    --identity-icon-color: var(--uc-identity-green, #51cd00) !important;
+}
+
+.identity-color-yellow {
+    --identity-tab-color: var(--uc-identity-yellow, #ffcb00) !important;
+    --identity-icon-color: var(--uc-identity-yellow, #ffcb00) !important;
+}
+
+.identity-color-orange {
+    --identity-tab-color: var(--uc-identity-orange, #ff9f00) !important;
+    --identity-icon-color: var(--uc-identity-orange, #ff9f00) !important;
+}
+
+.identity-color-red {
+    --identity-tab-color: var(--uc-identity-red, #ff613d) !important;
+    --identity-icon-color: var(--uc-identity-red, #ff613d) !important;
+}
+
+.identity-color-pink {
+    --identity-tab-color: var(--uc-identity-pink, #ff4bda) !important;
+    --identity-icon-color: var(--uc-identity-pink, #ff4bda) !important;
+}
+
+.identity-color-purple {
+    --identity-tab-color: var(--uc-identity-purple, #af51f5) !important;
+    --identity-icon-color: var(--uc-identity-purple, #af51f5) !important;
+}
+
+/***** popup.css *****/
+/* panel,
+#PersonalToolbar menupopup,
+#mainPopupSet menupopup {
+    --menu-color: var(--uc-menu-color) !important;
+    --menu-background-color: var(--uc-menu-background) !important;
+    --menu-border-color: var(--uc-menu-border-color) !important;
+    --menuitem-hover-background-color: var(
+        --uc-menuitem-hover-background-color
+    ) !important;
+    --menu-disabled-color: var(--uc-menu-disabled-color) !important;
+    --menuitem-disabled-hover-background-color: var(
+        --uc-menuitem-disabled-hover-background-color
+    ) !important;
+} */

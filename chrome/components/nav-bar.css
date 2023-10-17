@@ -1,0 +1,109 @@
+/* https://www.reddit.com/r/FirefoxCSS/comments/myypur/how_can_i_remove_extension_tabliss_from_the */
+.extensionPage#identity-box
+    #identity-icon[tooltiptext*="Tabliss"]
+    ~ #identity-icon-label {
+    display: none !important;
+}
+
+#identity-box.extensionPage #identity-icon[tooltiptext*="Tabliss"],
+#urlbar[pageproxystate="invalid"] #identity-box #identity-icon,
+#tracking-protection-icon-container[hidden]
+    ~ #identity-box[pageproxystate="valid"].notSecure:not(.chromeUI, .localResource)
+    #identity-icon {
+    fill-opacity: var(--urlbar-icon-fill-opacity) !important;
+    list-style-image: url("chrome://global/skin/icons/search-glass.svg") !important;
+}
+
+/* removes background but keeps it when hovered/active */
+#identity-box.extensionPage > #identity-icon-box:has([tooltiptext*="Tabliss"]) {
+    background-color: transparent !important;
+}
+
+#identity-box.extensionPage
+    > #identity-icon-box:hover:not([open]):has([tooltiptext*="Tabliss"]) {
+    background-color: var(--urlbar-box-hover-bgcolor) !important;
+}
+
+#identity-box.extensionPage
+    > #identity-icon-box[open="true"]:has([tooltiptext*="Tabliss"]) {
+    background-color: var(--urlbar-box-active-bgcolor) !important;
+}
+
+/* keeps icon location consistent */
+#urlbar[usertyping="true"]
+    #tracking-protection-icon-container[hidden]
+    ~ #identity-box:has([tooltiptext*="Tabliss"]),
+#urlbar-input-container[pageproxystate="invalid"]
+    #tracking-protection-icon-container[hidden]
+    ~ #identity-box:has([tooltiptext*="Tabliss"]) {
+    margin-inline-start: calc(var(--identity-box-margin-inline) - 2px);
+}
+
+/* removes shadow over nav bar */
+/* #nav-bar:-moz-lwtheme {
+    box-shadow: none !important;
+} */
+
+/* makes it consistent with the focus width */
+#urlbar-background,
+#searchbar {
+    border-width: 2px !important;
+}
+
+.urlbar-icon,
+.urlbar-page-action {
+    filter: none !important;
+}
+
+/* force text color? */
+.urlbar-page-action,
+#urlbar-go-button,
+.search-go-button {
+    color: var(--uc-urlbar-box-text-color) !important;
+}
+
+.urlbar-page-action:not([disabled]):hover,
+#urlbar-go-button:hover,
+.search-go-button:hover,
+.urlbar-page-action:not([disabled]):active,
+#urlbar-go-button:active,
+.search-go-button:active,
+.urlbar-page-action[open="true"]:not([disabled]) {
+    color: var(--urlbar-box-hover-text-color) !important;
+}
+
+.urlbar-page-action:not([disabled]):active,
+#urlbar-go-button:active,
+.search-go-button:active {
+    background-color: var(--urlbar-box-active-bgcolor) !important;
+}
+
+.urlbar-page-action:not([disabled]):hover > #star-button[starred],
+.urlbar-page-action:not([disabled]):active > #star-button[starred] {
+    fill: var(--urlbar-box-hover-text-color) !important;
+}
+
+/***** NAV ICONS CHANGE *****/
+
+#back-button,
+#forward-button {
+    padding: 0 !important;
+}
+
+#back-button > .toolbarbutton-icon {
+    list-style-image: url("../resources/nav-bar/back.svg") !important;
+}
+
+#forward-button > .toolbarbutton-icon {
+    list-style-image: url("../resources/nav-bar/forward.svg") !important;
+}
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon {
+    width: calc(2 * var(--toolbarbutton-inner-padding) + 18px) !important;
+    height: calc(2 * var(--toolbarbutton-inner-padding) + 18px) !important;
+}
+
+.bookmark-item[container] {
+    list-style-image: url("");
+}

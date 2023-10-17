@@ -1,0 +1,120 @@
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+    width: var(--uc-tab-margin, 4px) !important;
+}
+
+.tabbrowser-tab {
+    padding: 0 calc(var(--uc-tab-margin, 4px) / 2) !important;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+    > #tabbrowser-arrowscrollbox
+    > .tabbrowser-tab[first-visible-unpinned-tab] {
+    margin-inline-start: unset !important;
+}
+
+/* remove shadow from selected tabs */
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+#tabbrowser-tabs:not([noshadowfortests])
+    .tab-background:is([selected], [multiselected]) {
+    box-shadow: none !important;
+}
+
+/* adds borders around tabs */
+.tab-background {
+    outline: var(--uc-tab-outline-width, 1px) solid
+        color-mix(in srgb, currentColor 25%, transparent) !important;
+    outline-offset: calc(0px - var(--uc-tab-outline-width, 1px)) !important;
+}
+
+/* multiselected tabs should have colored borders too */
+.tab-background[selected]:-moz-lwtheme,
+.tab-background[multiselected="true"]:-moz-lwtheme {
+    outline: var(--uc-tab-outline-width) solid
+        var(--lwt-tab-line-color, var(--lwt-tabs-border-color, currentColor)) !important;
+    outline-offset: calc(0px - var(--uc-tab-outline-width, 1px)) !important;
+}
+
+/* make inactive tabs shorter */
+/* https://www.reddit.com/r/FirefoxCSS/comments/brklu0/the_right_way_to_change_your_tab_max_width */
+.tabbrowser-tab[fadein]:not([pinned], [style*="max-width"], [selected="true"]) {
+    max-width: var(--uc-tab-inactive-max-width, calc(225px / 2)) !important;
+}
+
+/* inactive tabs are faded */
+.tabbrowser-tab:not([selected="true"], [pinned]) .tab-content {
+    opacity: var(--uc-tab-inactive-opacity, 0.5);
+}
+
+/* for some reason, the close button appears when the first tab on the list is selected; this is a fix (?) */
+.tabbrowser-tab:not([pinned="true"], [selected="true"])
+    > .tab-stack
+    > .tab-content
+    > .tab-close-button:not([selected="true"]) {
+    display: none !important;
+}
+
+/* show close button when hovered but not when pinned */
+.tabbrowser-tab:not([pinned="true"]):hover
+    > .tab-stack
+    > .tab-content
+    > .tab-close-button:not([selected="true"]) {
+    display: -moz-box !important;
+}
+
+/* don't show all tabs button */
+#alltabs-button {
+    display: none !important;
+}
+
+/***** container tabs *****/
+
+.tabbrowser-tab[usercontextid] {
+    color: color-mix(
+        in srgb,
+        var(--identity-tab-color) 30%,
+        var(--lwt-tab-text)
+    ) !important;
+    --lwt-selected-tab-background-color: color-mix(
+        in srgb,
+        var(--identity-tab-color) 11%,
+        transparent
+    ) !important;
+}
+
+/* make tab border the identity color */
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background {
+    outline: var(--uc-tab-outline-width, 1px) solid
+        color-mix(in srgb, var(--identity-tab-color) 50%, transparent) !important;
+    background-color: var(--lwt-selected-tab-background-color) !important;
+}
+
+.tabbrowser-tab[usercontextid]
+    > .tab-stack
+    > .tab-background:is([selected], [multiselected]) {
+    outline: var(--uc-tab-outline-width, 1px) solid var(--identity-tab-color) !important;
+    background-image: linear-gradient(
+            var(--lwt-selected-tab-background-color, transparent),
+            var(--lwt-selected-tab-background-color, transparent)
+        ),
+        linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)),
+        var(--lwt-header-image, none) !important;
+}
+
+.tabbrowser-tab[usercontextid]:hover
+    > .tab-stack
+    > .tab-background:not([selected="true"], [multiselected]) {
+    background-color: color-mix(
+        in srgb,
+        var(--identity-tab-color) 18%,
+        transparent
+    ) !important;
+}
+
+/* no top line */
+.tabbrowser-tab[usercontextid]
+    > .tab-stack
+    > .tab-background
+    > .tab-context-line {
+    display: none;
+}

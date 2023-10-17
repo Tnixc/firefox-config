@@ -22,7 +22,7 @@
       --input-text: rgb(251,251,254);
       --input-text-focus: rgb(251,251,254);
       --identity-color-toolbar: rgb(251,251,254);
-      --tablist-separator: #333333;
+      --tablist-separator: #00000000;
   }
 }
 
@@ -50,9 +50,11 @@
 /* Right-align settings icon */
 #settings {
   margin-left: auto;
+  display: none;
 }
 
 #tablist-wrapper {
+  padding-top: 6px;
   height: auto;
   margin: 0 6px;
 }
@@ -104,15 +106,15 @@ body:hover #tablist-wrapper .tab-title-wrapper {
 }
 
 body #newtab::after {
-  content: "New tab";
+  content: "New Tab";
   visibility: hidden;
   margin-left: 10px;
   transition: all 0.2s ease;
-  transition-delay: 200ms;
+  transition-delay: 0ms;
 }
 
 body:hover #newtab::after {
-  visibility: visible;
+  visibility: hidden;
 }
 
 body:hover #tablist-wrapper::after,
