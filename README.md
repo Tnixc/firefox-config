@@ -1,6 +1,7 @@
 # Firefox vertical tabs setup
 
-<img src="https://cdn.discordapp.com/attachments/1030274959886532618/1030466755216277594/unknown.png">
+![image](https://github.com/Tnixc/firefox-config/assets/85466117/8777bdd2-dc39-4918-acfb-3827d3b9b1ba)
+
 
 ## You will need
 
@@ -23,7 +24,7 @@
 
  <img align="right" src="https://cdn.discordapp.com/attachments/1029287786433486899/1029316236095520798/unknown.png">
 
-2. Enable the custom stylesheet for Tab Center reborn extension
+2. Enable the custom stylesheet for [Tab Center Reborn](https://addons.mozilla.org/en-CA/firefox/addon/tabcenter-reborn/) extension
      1. Go to the addons settings
      2. Click on prefrences for Tab Center Reborn
      3. Click Prefrences
@@ -31,5 +32,8 @@
      5. Paste in the contents of `custom.css`
 
 3. Restart Firefox
+4. Finally, I recommend installing [firefox color](https://color.firefox.com/) to match the theme.
 
-### Note: You can scroll through the tabs by holding ctrl and scrolling. It is recommended to explore the settings of Tab Center Reborn.
+> [!TIP]
+> You can scroll through the tabs by holding ctrl and scrolling. I recommend you explore the settings of Tab Center Reborn
+> 
