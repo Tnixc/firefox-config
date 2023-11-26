@@ -91,16 +91,16 @@
             );
             eval(
                 `StarUI.showEditBookmarkPopup = async function ` +
-                    StarUI.showEditBookmarkPopup
-                        .toSource()
-                        .replace(/^\(/, "")
-                        .replace(/\)$/, "")
-                        .replace(/async showEditBookmarkPopup/, "")
-                        .replace(/async function\s*/, "")
-                        .replace(
-                            /BookmarkingUI\.anchor/,
-                            `hideOnNTP?._getAnchor(this.panel) || BookmarkingUI.anchor`
-                        )
+                StarUI.showEditBookmarkPopup
+                    .toSource()
+                    .replace(/^\(/, "")
+                    .replace(/\)$/, "")
+                    .replace(/async showEditBookmarkPopup/, "")
+                    .replace(/async function\s*/, "")
+                    .replace(
+                        /BookmarkingUI\.anchor/,
+                        `hideOnNTP?._getAnchor(this.panel) || BookmarkingUI.anchor`
+                    )
             );
             // the main part of this script. hide the tracking protection icon on new tab page.
             gProtectionsHandler.onLocationChange = function onLocationChange() {
@@ -111,7 +111,7 @@
                     if (
                         this._previousURI == currentURL &&
                         this._previousOuterWindowID ==
-                            gBrowser.selectedBrowser.outerWindowID
+                        gBrowser.selectedBrowser.outerWindowID
                     ) {
                         this.showProtectionsPopup({ toast: true });
                     }

@@ -52,5 +52,5 @@ menuitem#anonaddy,
 menuitem[image*="libredirect"],
 menuitem.context-menu-add-engine,
 menuitem[id*="send_to_hydrus_meme"] {
-    display: none !important;
+  display: none !important;
 }

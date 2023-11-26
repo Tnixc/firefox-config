@@ -80,13 +80,13 @@
         fixSyncSubviewButtonAlignment() {
             eval(
                 `gSync.populateSendTabToDevicesView = function ` +
-                    gSync.populateSendTabToDevicesView
-                        .toSource()
-                        .replace(/^populateSendTabToDevicesView/, ``)
-                        .replace(
-                            /item.setAttribute\(\"align\", \"start\"\);/,
-                            ``
-                        )
+                gSync.populateSendTabToDevicesView
+                    .toSource()
+                    .replace(/^populateSendTabToDevicesView/, ``)
+                    .replace(
+                        /item.setAttribute\(\"align\", \"start\"\);/,
+                        ``
+                    )
             );
         }
     }

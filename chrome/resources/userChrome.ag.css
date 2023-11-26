@@ -8,9 +8,9 @@
 
 /* Demonstrates namespace selector - this would only affect tooltip elements that are html elements. But those don't exist so this does nothing. If you remove the "html|" prefix, then all your tooltips will be black */
 html|tooltip {
-    -moz-appearance: none;
-    background-color: rgb(15, 17, 34);
-    color: rgba(255, 255, 255, 1);
-    border: none;
-    padding: 5px;
+  -moz-appearance: none;
+  background-color: rgb(15, 17, 34);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  padding: 5px;
 }

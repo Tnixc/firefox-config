@@ -19,5 +19,5 @@
        menuitem[command="Browser:OpenAboutContainers"],         /* Manage Containers */
 
 #leave_this_dummy_here {
-    display: none !important;
+  display: none !important;
 }
