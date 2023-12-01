@@ -12,7 +12,7 @@
 ### Files
 `1. chrome` folder
 
-`2. custom.css`
+`2. TabCenterReborn.css`
 
 ---
 # Installation
@@ -29,7 +29,7 @@
      2. Click on prefrences for Tab Center Reborn
      3. Click Prefrences
      4. Scroll down to advanced and enable custom stylesheet
-     5. Paste in the contents of `custom.css`
+     5. Paste in the contents of [TabCenterReborn.css](https://github.com/Tnixc/firefox-config/blob/main/TabCenterReborn.css)
 
 3. Restart Firefox
 4. Finally, I recommend installing [firefox color](https://color.firefox.com/) to match the theme.
