@@ -108,3 +108,26 @@
 .tab:not(.active):hover {
   background: #313243 !important;
 }
+.tab-pin {
+  position: absolute;
+  right: 4px;
+  opacity: 0;
+  transition: 100ms;
+}
+body:hover .tab-pin {
+  opacity: 1;
+}
+#pinnedtablist {
+  padding-bottom: 6px;
+  position: relative;
+}
+#pinnedtablist::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  bottom: 1px;
+  height: 2px;
+  background-color: #252739;
+  border-radius: 999px;
+}
