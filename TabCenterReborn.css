@@ -1,0 +1,110 @@
+/* Overwrite some colours */
+:root {
+  --tab-separator: transparent;
+  --tab-selected-line: transparent;
+  --tablist-separator: #cccccc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tab-separator: transparent;
+    --tab-active-background: rgb(66, 65, 77);
+    --tab-active-text: rgb(251, 251, 254);
+    --tab-text: #fbfbfe;
+    --toolbar-background: rgb(43, 42, 51);
+    --toolbar-text: rgb(251, 251, 254);
+    --input-background: rgb(28, 27, 34);
+    --input-border: transparent;
+    --input-background-focus: rgb(66, 65, 77);
+    --input-selected-text: rgb(251, 251, 254);
+    --input-text: rgb(251, 251, 254);
+    --input-text-focus: rgb(251, 251, 254);
+    --identity-color-toolbar: rgb(251, 251, 254);
+    --tablist-separator: #00000000;
+  }
+}
+
+/* Move topmenu to bottom */
+#topmenu {
+  order: 2;
+  background: transparent;
+  border: none;
+  margin: 3px;
+}
+#newtab {
+  flex-grow: 1;
+}
+#newtab-icon {
+  transform: translateX(3px);
+}
+#settings,
+#filterbox-icon,
+#filterbox-input {
+  display: none;
+}
+#tablist-wrapper {
+  padding-top: 6px;
+  height: auto;
+  margin: 0 6px;
+}
+.tab {
+  padding: 0px !important;
+  margin: 0px !important;
+  gap: 0px !important;
+  border-radius: 8px;
+}
+.active {
+  box-shadow: inset 0 0 0 2px #b7bdf8 !important;
+}
+.tab-meta-image {
+  transform: translateX(1px);
+}
+#pinnedtablist:not(.compact) .tab,
+#tablist .tab {
+  border-color: transparent;
+}
+#tablist-wrapper {
+  margin-left: 0px;
+  padding-left: 6px;
+}
+#tablist {
+  gap: 2px;
+  margin-left: -6px;
+  padding-left: 6px;
+}
+.tab {
+  overflow: visible;
+}
+#tablist .tab[data-identity-color] .tab-context {
+  box-shadow: none !important;
+}
+#tablist .tab[data-identity-color] .tab-context::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 0 5px 5px 0;
+  background: var(--identity-color);
+  transition: inset 0.1s;
+}
+#tablist .tab.active[data-identity-color] .tab-context::before {
+  top: 1px;
+  bottom: 1px;
+}
+#bottomshadow,
+#topshadow {
+  box-shadow: 0 0 10px 0 #252739;
+}
+#newtab:hover {
+  background: #252739;
+}
+.tab-close {
+  height: 28px !important;
+  border-radius: 4px;
+  transform: translateX(-4px);
+}
+.tab:not(.active):hover {
+  background: #313243 !important;
+}
