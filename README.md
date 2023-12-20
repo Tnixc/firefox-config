@@ -1,6 +1,7 @@
 # Firefox vertical tabs setup
 
-![image](https://github.com/Tnixc/firefox-config/assets/85466117/8777bdd2-dc39-4918-acfb-3827d3b9b1ba)
+![Setup](https://github.com/Tnixc/firefox-config/assets/85466117/7c55b3fe-ca2b-4bdc-9435-a1c248a82f50)
+
 
 
 ## You will need
